@@ -1,8 +1,5 @@
 GeneralAssembly
 ===============
-
-My Homework
-
 (1..100).each do |i|
   #In my first line of code the each method prints out the numbers between 1-100.
   if (i % 3 == 0) & (i % 5 == 0) 
