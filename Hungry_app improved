@@ -1,0 +1,116 @@
+apps =[ "nachos","guacamole","bloomin onion","bread sticks","garlic knots", "No thanks"]
+ents =["hamburger","lobster","chicken","No thanks"]
+desserts= ["coffee","cake","ice cream","No thanks"]
+drinks= ["Coke", "Water", "Beer", "Milkshake","No thanks"]
+bill=[]
+
+puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+puts"Welcome to R720"
+puts
+puts "Would you like something to drink?"
+
+drinks.each_with_index do |item,index|
+puts "#{index}: #{item}"
+end
+
+
+user_input=gets().chomp().to_i()
+
+selected_drink= drinks[user_input]
+
+if selected_drink=="No thanks"
+puts "Thats a shame..."
+
+else
+puts "#{selected_drink} is my favorite! How do you want it prepared?"
+
+user_input2=gets().chomp().upcase
+
+puts "#{user_input2}" "!!!!!!!!!!!"
+
+bill<<selected_drink
+end
+puts "_______________________________________"
+puts "would you like an appetizer?"
+
+apps.each_with_index do |item,index|
+puts "#{index}: #{item}"
+end
+
+user_input = gets().chomp().to_i()
+
+selected_appetizer = apps[user_input]
+
+if selected_appetizer=="No thanks"
+puts "Well thats a mistake!"
+
+else
+
+puts " You ordered #{selected_appetizer} ! How do you want it prepared?"
+
+user_input2=gets().chomp().upcase
+
+puts "#{user_input2}" "!!!!!!!!!!!"
+bill<<selected_appetizer
+
+end
+puts
+puts "Entrees"
+puts "___________________________________"
+
+ents.each_with_index do |item,index|
+	puts "#{index}: #{item}"
+end
+
+	user_input = gets().chomp().to_i()
+
+	selected_entree = ents[user_input]
+
+if selected_entree== "No thanks"
+puts "Good thinking with that belly!"
+
+else
+puts "You ordered #{selected_entree}. How would you like it prepared?"
+
+user_input2=gets().chomp().upcase
+
+puts "#{user_input2}" "!!!!!!!!!!!"
+
+"What would you like for dessert?"
+
+bill<<selected_entree
+
+	puts "Desserts"
+
+	desserts.each_with_index do |item,index|
+
+	puts "#{index}: #{item}"
+
+end
+puts
+
+user_input = gets().chomp().to_i()
+
+selected_dessert = desserts[user_input]
+
+if selected_dessert== "No thanks"
+puts "Thats a shame..."
+
+else
+puts "You ordered #{selected_dessert}. How would you like it prepared?"
+user_input2=gets().chomp().upcase
+
+puts "#{user_input2}" "!!!!!!!!!!!"
+bill<<selected_dessert
+end 
+
+puts"_____________________________________"
+
+puts"Your bill"
+
+	bill.each_with_index do |item,index|
+
+	puts "* #{item}:"
+end
+
+end
